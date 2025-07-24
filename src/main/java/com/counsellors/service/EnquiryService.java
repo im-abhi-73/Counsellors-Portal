@@ -11,11 +11,11 @@ public interface EnquiryService {
 
 
 
-    public DashbordDTO getDashbordInfo(Integer counsellorDTO);
+    public DashbordDTO getDashbordInfo(Integer counsellorId);
 
     public boolean addEnquiry(EnquiryDTO enquiryDTO, Integer counsellorDTO);
 
-    public List<EnquiryDTO> getEnquiry(Integer counsellorDTO);
+    public List<EnquiryDTO> getEnquiry(Integer counsellorId);
 
     public List<EnquiryDTO> getEnquiry(EnqFilterDTO filterDTO, Integer counsellorDTO);
 

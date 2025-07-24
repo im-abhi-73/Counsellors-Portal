@@ -17,14 +17,13 @@ public class CounsellorEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer counsellorId;
     private String name;
-    @Id
     private String email;
     private String password;
     private String phone;
 
 
 @OneToMany(mappedBy = "counsellor", cascade = CascadeType.ALL)
-   private List<EnqueryEntity>enqueryEntities;
+   private List<EnquiryEntity>enquiryEntities;
 
 
 }

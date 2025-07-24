@@ -5,10 +5,10 @@ import lombok.Data;
 @Data
 public class DashbordDTO {
 
-    private long totalEnqCount;
-    private long openEnqCount;
-    private long entrolledEnqCount;
-    private long lostEnqCount;
+    private Integer totalEnqCount;
+    private Integer openEnqCount;
+    private Integer entrolledEnqCount;
+    private Integer lostEnqCount;
 
 
 }
