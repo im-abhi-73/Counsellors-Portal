@@ -25,7 +25,6 @@ public class EnquiryServiceImpl implements  EnquiryService {
     @Autowired
     private CounsellorRepo counsellorRepo;
 
-
     @Override
     public DashbordDTO getDashbordInfo(Integer counsellorId) {
 
@@ -50,7 +49,8 @@ public class EnquiryServiceImpl implements  EnquiryService {
                                       .toList())
                                       .size();
 
-     dto.setEntrolledEnqCount(entrollCnt);
+
+     dto.setEnrolledEnqCount(entrollCnt);
 
     int lostCnt =  enqsList.stream()
                                   .filter(enq -> enq
@@ -123,7 +123,6 @@ public class EnquiryServiceImpl implements  EnquiryService {
         Example<EnquiryEntity> of = Example.of(entity);
         List<EnquiryEntity> enqList = enquiryRepo.findAll(of);
 
-
         List<EnquiryDTO> enquiryDTO =  new ArrayList<>();
 
         for (EnquiryEntity enq : enqList) {
@@ -132,7 +131,6 @@ public class EnquiryServiceImpl implements  EnquiryService {
 
             enquiryDTO.add(dto);
         }
-        
         return List.of();
     }
 
@@ -146,9 +144,7 @@ public class EnquiryServiceImpl implements  EnquiryService {
            EnquiryDTO dto = new EnquiryDTO();
            BeanUtils.copyProperties(entity, dto);
            return dto;
-
        }
-
         return null;
     }
 }
